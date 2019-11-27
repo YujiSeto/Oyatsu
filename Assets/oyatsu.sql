@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 26, 2019 at 12:47 AM
+-- Generation Time: Nov 27, 2019 at 01:19 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -36,15 +36,15 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `email` varchar(50) NOT NULL,
   `telefone` varchar(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `employee`
 --
 
 INSERT INTO `employee` (`id`, `name`, `cpf`, `email`, `telefone`) VALUES
-(2, 'Amilto Romagno', '24242424243', 'amiltoromangno@outlook.com', '47985642424'),
-(3, 'Ruan Bardt', '65489754213', 'sebart@gmail.com', '47859697451');
+(5, 'Rodrigo', '85632569754', 'rodrigo@oyatsu.com', '47859632514'),
+(3, 'Daniel', '01236547851', 'daniel@daniel.com', '48985635274');
 
 -- --------------------------------------------------------
 
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `name` varchar(50) NOT NULL,
   `price` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `products`
@@ -66,27 +66,12 @@ CREATE TABLE IF NOT EXISTS `products` (
 
 INSERT INTO `products` (`id`, `name`, `price`) VALUES
 (3, 'X Burguer', 2.5),
-(4, 'X Simples', 2),
+(4, 'X Simples', 3),
 (5, 'X Bacon', 8),
 (6, 'X CoraÃ§Ã£o', 8),
 (7, 'X Tudo', 15),
-(8, 'Coca Cola Lata', 3);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `purchases`
---
-
-DROP TABLE IF EXISTS `purchases`;
-CREATE TABLE IF NOT EXISTS `purchases` (
-  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `supplier` varchar(50) NOT NULL,
-  `product` varchar(50) NOT NULL,
-  `price` float NOT NULL,
-  `quantity` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+(8, 'Fanta', 2.5),
+(13, 'Coca Cola Lata', 3);
 
 -- --------------------------------------------------------
 
@@ -102,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `sales` (
   `quantity` int(11) NOT NULL,
   `totalprice` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sales`
@@ -111,8 +96,10 @@ CREATE TABLE IF NOT EXISTS `sales` (
 INSERT INTO `sales` (`id`, `product`, `price`, `quantity`, `totalprice`) VALUES
 (8, 'X CoraÃ§Ã£o', 8, 1, 8),
 (7, 'X Simples', 2, 2, 4),
-(9, 'Coca Cola Lata', 3, 4, 12),
-(10, 'Coca Cola Lata', 3, 1, 3);
+(12, 'X Simples', 2, 2, 4),
+(10, 'Coca Cola Lata', 3, 1, 3),
+(13, 'X Simples', 2, 4, 8),
+(14, 'X Bacon', 8, 2, 16);
 
 -- --------------------------------------------------------
 
@@ -141,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `supplier` (
   `cnpj` int(20) NOT NULL,
   `email` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `supplier`
@@ -164,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`

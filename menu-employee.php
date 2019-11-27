@@ -1,4 +1,5 @@
 <?php
+//Editar Funcionários
 session_start();
 if(!isset($_SESSION['username'])){
     header('location: login.php');
@@ -22,36 +23,36 @@ if(!isset($_SESSION['username'])){
                     ?>
                 </div>
                 <div class="right-panel">
-                    <a href="new-sale.php"><div class="new-user-button">Novo</div></a>
+                    <a href="new-employee.php"><div class="new-user-button">Novo</div></a>
                     <table class="users-table">
                         <tr>
-                            <th>Produtos</th>
-                            <th>Preço</th>
-                            <th>Quantidade</th>
-                            <th>Preço Total</th>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
                             <th>Ações</th>
                         </tr>
                         <?php
                             $con = mysqli_connect('localhost','root');
                             mysqli_select_db($con, 'oyatsu');
-                            $sql = "SELECT id, product, price, quantity, totalprice FROM sales";
+                            $sql = "SELECT id, name, cpf, email, telefone FROM employee";
                             $result = $con->query($sql);
                             if ($result->num_rows > 0) {
                                 while($row = $result->fetch_assoc()) {
-                                    echo 
-                                    "<tr>
-                                    <td>" . $row["product"]. "</td>
-                                    <td>" . $row["price"] . "</td>
-                                    <td>" . $row["quantity"] . "</td>
-                                    <td>" . $row["totalprice"] . "</td>
-                                    <td><a href='edit-functions.php?edit=" . $row["id"] . "'>Editar</a> | 
-                                    <a href='functions.php?delete_sale=" . $row["id"] . "'>Excluir</a>";
+                                    echo "<tr>
+                                    <td>" . $row["name"]. "</td>
+                                    <td>" . $row["cpf"]. "</td>
+                                    <td>" . $row["email"]. "</td>
+                                    <td>" . $row["telefone"]. "</td>
+                                    <td><a href='functions.php?edit_employee=" . $row["id"] . "'>Editar</a> | 
+                                    <a href='functions.php?delete_employee=" . $row["id"] . "'>Excluir</a>
+                                    </tr>";
                                 }
                             }
                             mysqli_close($con);
                         ?>
-                        </tr>
                     </table>
+
                 </div>
             </div>
         </div>

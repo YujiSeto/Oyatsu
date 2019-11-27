@@ -1,5 +1,5 @@
 <?php
-//Tela Inicial
+//Editar Produtos
 session_start();
 if(!isset($_SESSION['username'])){
     header('location: login.php');
@@ -23,9 +23,13 @@ if(!isset($_SESSION['username'])){
                     ?>
                 </div>
                 <div class="right-panel">
-                    <div class="innerdiv">
-                        <img class="imghome"src="Assets/oyatsuhome.png">
-                    </div>
+                    <h3>Editar Produto</h3><br>
+                    <form class="new-user-form" method="POST" action="functions.php">
+                        <input type="text" name="new_product_name" placeholder="Nome do Produto"><br>
+                        <input type="text" name="new_product_price" placeholder="Preço"><br>
+                        <input type="hidden" value="<?php echo $_GET['id'];?>" name="id">
+                        <input type="submit" value="Editar" name="edit_product">
+                    </form>
                 </div>
             </div>
         </div>

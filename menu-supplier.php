@@ -41,7 +41,7 @@ if(!isset($_SESSION['username'])){
                                     <td>" . $row["name"]. "</td>
                                     <td>" . $row["cnpj"]. "</td>
                                     <td>" . $row["email"]. "</td>
-                                    <td><a href='edit-functions.php?edit=" . $row["id"] . "'>Editar</a> | 
+                                    <td><a href='functions.php?edit_supplier=" . $row["id"] . "'>Editar</a> | 
                                     <a href='functions.php?delete_supplier=" . $row["id"] . "'>Excluir</a>
                                     </tr>";
                                 }

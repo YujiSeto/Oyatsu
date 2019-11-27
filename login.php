@@ -1,4 +1,5 @@
 <?php
+// Tela de Login
 session_start();
 if(isset($_SESSION['username'])){
     header('location: index.php');

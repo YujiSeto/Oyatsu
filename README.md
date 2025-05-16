@@ -1,9 +1,10 @@
 # 🍔 Oyatsu
 
-[![GitHub license](https://img.shields.io/github/license/YujiSeto/Oyatsu)](https://github.com/YujiSeto/Oyatsu/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/YujiSeto/Oyatsu)](https://github.com/YujiSeto/Oyatsu/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/YujiSeto/Oyatsu)](https://github.com/YujiSeto/Oyatsu/issues)
+<div align="center">
+   <img src="Assets/Oyatsuhome.png" width="600" alt="Tela inicial do Oyatsu">
+</div>
 
+---
 **Oyatsu** é um sistema para gerenciamento de pedidos para lanchonetes. O nome "Oyatsu" (おやつ) significa "lanche" em japonês, representando a proposta do sistema de tornar o processo de pedidos tão simples e agradável quanto desfrutar de um bom lanche.
 
 ## 📋 Sobre o Projeto
@@ -58,10 +59,6 @@ http://localhost/Oyatsu/
 ### Gestão Financeira
 - Relatórios básicos de vendas
 - Histórico de transações
-
-## 🖼️ Screenshots
-
-<img src="Assets/Oyatsuhome.png" width="600" alt="Tela inicial do Oyatsu">
 
 ## 📊 Modelo de Dados
 

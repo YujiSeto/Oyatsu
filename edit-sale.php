@@ -28,8 +28,8 @@
                         <select name="new_sale_product_name">
                             <option value="" disabled selected>Selecione o produto</option>
                             <?php
-                                $con = mysqli_connect('localhost','root');
-                                mysqli_select_db($con, 'oyatsu');
+                                require_once __DIR__ . '/db.php';
+
                                 $sql = "SELECT name FROM products";
                                 $result = $con->query($sql);
                                 while($rows = $result->fetch_assoc()){

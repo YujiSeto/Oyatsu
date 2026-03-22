@@ -30,8 +30,8 @@ if(!isset($_SESSION['username'])){
                             <th>Ações</th>
                         </tr>
                         <?php
-                            $con = mysqli_connect('localhost','root');
-                            mysqli_select_db($con, 'oyatsu');
+                            require_once __DIR__ . '/db.php';
+
                             $sql = "SELECT id, name, price FROM products";
                             $result = $con->query($sql);
                             if ($result->num_rows > 0) {

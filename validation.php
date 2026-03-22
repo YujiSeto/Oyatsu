@@ -1,7 +1,6 @@
 <?php
 session_start();
-$con = mysqli_connect('localhost','root');
-mysqli_select_db($con, 'oyatsu');
+require_once __DIR__ . '/db.php';
 
 $username = $_POST['username'];
 $password = $_POST['password'];

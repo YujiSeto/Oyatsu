@@ -1,6 +1,5 @@
 <?php
-    $con = mysqli_connect('localhost','root'); // Conectar ao banco de dados
-    mysqli_select_db($con, 'oyatsu'); // Acessar o banco de dados
+    require_once __DIR__ . '/db.php';
 
 //Adicionar Venda
 if (isset($_POST['save_sale'])){
